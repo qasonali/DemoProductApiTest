@@ -2,6 +2,7 @@ package utilities;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,6 +30,11 @@ public class Utility {
 	public static WebElement waitForVisibility(WebDriver driver,By locator) {
 		return new WebDriverWait(driver, Duration.ofSeconds(5))
 				.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		
+	}
+	public static Alert waitForAlertPresent(WebDriver driver) {
+		return new WebDriverWait(driver, Duration.ofSeconds(5))
+				.until(ExpectedConditions.alertIsPresent());
 		
 	}
 }
