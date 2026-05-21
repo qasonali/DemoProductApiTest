@@ -10,12 +10,9 @@ import org.openqa.selenium.WebDriver;
 
 public class ScreenshotUtil {
 
-    public static void captureScreenshot(WebDriver driver,
-                                         String testName)
-                                         throws IOException {
+    public static void captureScreenshot(WebDriver driver,String testName) throws IOException {
 
-        TakesScreenshot ts =
-                (TakesScreenshot) driver;
+        TakesScreenshot ts = (TakesScreenshot) driver;
 
         File src = ts.getScreenshotAs(OutputType.FILE);
 

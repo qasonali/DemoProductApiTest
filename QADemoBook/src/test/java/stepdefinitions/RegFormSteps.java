@@ -23,19 +23,19 @@ public class RegFormSteps {
 	}
 	@When("user enters valid details")
 	public void user_enters_valid_details() throws IOException {
-		registerPage.enterDetails();
+		  Hooks.test.info("Entering all the registration details");
+		  registerPage.enterDetails();
 	    
 	}
 	@When("click on new user button")
 	public void click_on_new_user_button() {
 	   try {
-		registerPage.doRegister();
-	} catch (InterruptedException e) {
+		   Hooks.test.info("Click on New user button");
+		   registerPage.doRegister();
+	    } catch (InterruptedException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
-	}
-	 
-	    
+	  }	 	    
 	}
 	
 	@When("user enters already registered username")
@@ -45,6 +45,7 @@ public class RegFormSteps {
 	
 	@Then("user account should be created successfully")
 	public void user_account_should_be_created_successfully() {
+		   Hooks.test.info("Account created successfully");
 	   
 	}
 
