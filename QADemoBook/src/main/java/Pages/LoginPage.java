@@ -31,7 +31,7 @@ public class LoginPage extends BasePage {
 	}
 
 	public String doLogin() throws IOException {
-		WebElement btn=Utility.waitForElementClickable(driver, loginBtn);
+		WebElement btn = Utility.waitForElementClickable(driver, loginBtn);
 		btn.click();
 		String title = driver.getTitle();
 		System.out.println("Home page title :::" + title);
