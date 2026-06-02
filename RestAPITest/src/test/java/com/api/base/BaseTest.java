@@ -10,7 +10,9 @@ public class BaseTest {
 
 	public BaseTest() {
 		RestAssured.baseURI = ConfigManager.getInstance().getProperty("baseurl");
-		req = RestAssured.given().header("x-api-key", ConfigManager.getInstance().getProperty("api-key"))
+		req = RestAssured
+				.given()
+				.header("x-api-key", ConfigManager.getInstance().getProperty("api-key"))
 				.header("Content-Type","application/json");
 	}
 }
