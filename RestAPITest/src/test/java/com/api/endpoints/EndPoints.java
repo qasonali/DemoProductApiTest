@@ -38,8 +38,7 @@ public class EndPoints extends BaseTest {
 				.pathParam("collectionName", typeOfCollection)
 				.when()
 				.post(CREATE_COLLECTION);
-	}
-	
+	}	
 	public Response getCollections() {
 		return req
 				.when()

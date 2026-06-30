@@ -20,7 +20,7 @@ public class Hooks extends BasePage {
     @Before
     public void beforeScenario(Scenario scenario) {
 
-        test = extent.createTest(scenario.getName());
+    	test = extent.createTest(scenario.getName());
     }
 
     @After
@@ -36,7 +36,7 @@ public class Hooks extends BasePage {
 
         } else {
 
-            test.pass("Test Passed");
+            test.pass("Test Passed");	
         }
 
         extent.flush();
